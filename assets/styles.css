@@ -1,0 +1,178 @@
+/* CompressX – Dark Navy & Neon Gradient Premium Theme */
+
+:root {
+  --bg-dark: #0B0F19;
+  --bg-card: rgba(17, 24, 39, 0.7);
+  --border-card: rgba(99, 102, 241, 0.25);
+  --accent-blue: #3B82F6;
+  --accent-purple: #8B5CF6;
+  --accent-cyan: #06B6D4;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+}
+
+/* Stat card */
+.stat-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
+.stat-title {
+  color: #94A3B8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  color: #F8FAFC;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.stat-sub {
+  color: #A78BFA;
+  font-size: 0.78rem;
+  margin-top: 3px;
+}
+
+/* Hero Box */
+.compressx-hero {
+  background: linear-gradient(135deg, #1E1B4B 0%, #0F172A 60%, #1E293B 100%);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.25);
+}
+
+.hero-heading {
+  font-size: 2.1rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #FFFFFF 0%, #C084FC 50%, #60A5FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.hero-subheading {
+  color: #CBD5E1;
+  font-size: 1.0rem;
+  line-height: 1.5;
+}
+
+/* Preset Pill */
+.preset-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.preset-blue {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93C5FD;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.preset-green {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6EE7B7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+/* ========================================================
+   MODERN PREMIUM SIDEBAR NAVIGATION STYLING
+   Eliminates plain circular radio dots; replaces with sleek tabs
+   ======================================================== */
+[data-testid="stSidebar"] [data-testid="stRadio"] {
+  padding: 0 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] > label {
+  display: none !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label {
+  background: rgba(30, 41, 59, 0.4) !important;
+  border: 1px solid rgba(99, 102, 241, 0.15) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+/* Hide default circular radio button */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label > div:first-child {
+  display: none !important;
+}
+
+/* Nav Item Text */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label div[data-testid="stMarkdownContainer"] p {
+  color: #94A3B8 !important;
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 !important;
+  transition: color 0.2s ease !important;
+}
+
+/* Hover state */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:hover {
+  background: rgba(99, 102, 241, 0.15) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  transform: translateX(4px) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:hover div[data-testid="stMarkdownContainer"] p {
+  color: #F8FAFC !important;
+}
+
+/* Active / Selected Tab State (Pill effect with purple/blue gradient) */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.35) 0%, rgba(139, 92, 246, 0.25) 100%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.65) !important;
+  box-shadow: 0 4px 14px -2px rgba(139, 92, 246, 0.3) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked)::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 18% !important;
+  height: 64% !important;
+  width: 4px !important;
+  border-radius: 0 4px 4px 0 !important;
+  background: linear-gradient(180deg, #38BDF8 0%, #A855F7 100%) !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) div[data-testid="stMarkdownContainer"] p {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
