@@ -1,0 +1,8 @@
+streamlit
+numpy
+scipy
+pillow
+pillow-avif-plugin
+imageio-ffmpeg
+plotly
+pandas
